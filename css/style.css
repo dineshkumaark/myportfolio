@@ -36,8 +36,12 @@ body{
     font-weight: 600;
     color: blueviolet;
     margin-top: 3%;
-    position: relative;
-    top: 15%;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, darkviolet 20%, orchid 40%, mediumorchid 60%, darkviolet 80%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 12s linear infinite;
 }
 .logok{
     color: orchid;
