@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 *{
     padding: 0;
     margin: 0;
@@ -21,7 +22,7 @@ background: mediumorchid;
 body{
     height: 100%;
     width: 100%;
-    font-family:Montserrat,serif;
+    font-family: Montserrat,serif;
     overflow-y: auto;
 }
 .illus{
@@ -61,6 +62,7 @@ ul{
 li{
    display: inline-block;
    margin-right: 45px;
+   font-size: 1.2rem;
    margin-top: 4%;
    color: aliceblue;
    position: relative;
@@ -84,7 +86,7 @@ li:hover::after{
 .hero{
    margin-top: 10%;
 }
-p{    
+.greetings{    
    color: #444242b5;
  margin-left: 0.5%;
 }
@@ -114,4 +116,54 @@ p{
 .job {
  font-size: 3rem;
  font-weight: 700;
+}
+/* About page */
+#about{
+    padding: 7rem;
+    background: url('../images/about.png') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.about-me{
+    font-size: 3rem;
+    color: blueviolet;
+    position: relative;
+}
+.about-me::after{
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 0.5%;
+    width: 7%;
+    height: 10%;
+    background:orchid;
+    border-radius: 15px;
+    transition: all 250ms;
+}
+.brand {
+    font-size: 15rem;
+    position: absolute;
+    top: 0%;
+    left: 3%;
+    font-weight: 600;
+    color: rgba(187, 183, 183, 0.17);
+    color: #F5F5F5;
+    z-index: -1;
+}
+.f-end{
+    margin-top: 3%;
+    font-size: 2rem;
+}
+.about-para{
+    margin-top: 3%;
+    font-size: 1.25rem;
+    line-height: 1.7rem;
+}
+.passion,.work{
+    margin-top: 2%;
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+}
+.work{
+    font-weight: bold;
 }
