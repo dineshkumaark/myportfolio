@@ -17,6 +17,7 @@ width: 10px;
 /* Handle */
 ::-webkit-scrollbar-thumb {
 background: orchid; 
+border-radius: 10px
 }
 
 /* Handle on hover */
@@ -106,8 +107,10 @@ li:hover::after{
 .greetings{    
    color: #444242b5;
  margin-left: 0.5%;
+ animation: opa 1600ms linear forwards;
 }
 .name {
+    display: inline-block;
  font-size: 4rem;
  color: blueviolet;
  font-weight: bold;
@@ -117,11 +120,23 @@ li:hover::after{
  background-clip: text;
  -webkit-background-clip: text;
  animation: shine 12s linear infinite;
+  transform: translateX(-180%);
+  animation: dist 1000ms linear forwards
 }
 @keyframes shine{
  to{
      background-position: 200% center;
  }
+}
+@keyframes dist{
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes opa{
+    to{
+        opacity: 1;
+    }
 }
 .name::after{
  content: ',';
@@ -131,8 +146,11 @@ li:hover::after{
  font-size: 3.5rem;
 }
 .job {
+    display: inline-block;
  font-size: 3rem;
  font-weight: 700;
+ opacity: 0;
+ animation: opa 1600ms linear forwards;
 }
 /* About page */
 #about{
