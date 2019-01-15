@@ -7,12 +7,14 @@
     <title>My Portfolio</title>
     <link rel="shortcut icon" href="./images/icon.ico" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css"></i>
 </head>
 <body>    
-            <header>       
-                    <nav class="nav-bar">
+            <header id="headers">       
+                    <nav id="nav-bar">
                      <a href="#"><span class="logo">d<span class="logok">k</span>.</span></a>
-                        <ul>
+                        <ul class="nav-link">
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
@@ -23,19 +25,106 @@
             <div class="illus">  
             <div class="container">
             <div class="hero">
-                <p class="greetings">Hello,I'm</p><span class="name">Dinesh</span><br><span class="job">Front-end Developer</span>
+                <p class="greetings">Hello,I'm</p><span class="name dk">Dinesh</span><br><span class="job">Front-end Developer</span>
             </div>
             </div>
     </div>
     <div id="about">
         <div class="container myself">
-            <h2 class="about-me">About me.</h2>
+            <h6 class="about-me">About me.</h6>
             <span class="brand">about</span>
             <h3 class="f-end">Front-end Developer</h3>
                 <p class="about-para">My name is Dinesh Kumaar,20-year-old <b>Self-taught Developer,<br></b>I learned almost  everything myself of my curiosity and my <br> desire for new experience. <br>I'm a weird guy who likes to make weird things in web technologies. <br>I'm interested in design,UX/UI and new technique</p>
                 <p class="passion">My passion is all about creating real elegant looking websites.<br> keeping it simple and clean with added functionally of user <br>interaction would like to see</p>
                 <p class="work">Want to work together? I’d love to hear from you.</p>
         </div>
-</div>
+    </div>
+    <div id="skill">
+        <div class="container myself">
+            <div class="group">
+                <h2 class="skill t-ani">Skill.</h2>
+                <span class="brand-skill">skill</span>
+                <h3 class="s-desc">I'm comfortable working with both 
+                     back-end and front-end technologies.</h3>
+            </div>
+            <div class="skills">
+                <div class="front">
+                    <div class="web-front"><img src="./images/front.png" alt=""></div>
+                    <div class="desc">
+                        <h3>Front-end</h3>
+                        <ul>
+                            <i class="devicon-html5-plain-wordmark colored"></i>
+                            <i class="devicon-css3-plain-wordmark colored"></i>
+                            <i class="devicon-javascript-plain colored"></i>
+                            <i class="devicon-sass-original colored"></i>
+                            
+                        </ul>
+                        <h3 class="frame">Frameworks</h3>
+                        <ul>
+                            <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                            <i class="devicon-react-original-wordmark colored"></i>
+                            <i class="fi fi-redux"></i>
+                        </ul>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="web-end"><img src="./images/back.png" alt=""></div>
+                    <div class="desc">
+                            <h3>Back-end</h3>
+                            <ul>
+                                <i class="devicon-php-plain colored"></i>
+                                <i class="devicon-java-plain-wordmark colored"></i>
+                                <i class="devicon-mysql-plain-wordmark colored"></i>
+                            </ul>
+                        </div>
+                </div>
+                <div class="design">
+                    <div class="web-des"><img src="./images/design.png" alt=""></div>
+                        <div class="desc">
+                                <h3>Design</h3>
+                                <ul>
+                                    <i class="devicon-photoshop-plain colored"></i>
+                                    <i class="devicon-illustrator-plain colored"></i>
+                                </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <div class="port">
+                <h3 class="portfolio">Portfolio</h3>
+                <span class="brand-port">portfolio</span>
+            </div>
+            <div class="projects">
+                <a href="http://www.npkcrackers.epizy.com" target="_blank" class="project">
+                    <div class="project_img">
+                        <img src="./images/p1.jpg" alt="npk">
+                        <div class="view_project">
+                            <h3>View Project</h3>
+                        </div>
+                    </div>
+                    <div class="project_title">
+                        <h3>Blue <br> Water</h3>
+                        <p>Website <span>/</span> Tourism</p>
+                    </div>
+                </a>
+                <a href="www.npkcrackers.epizy.com" target="_blank" class="project">
+                        <div class="project_img">
+                            <img src="./images/p2.jpg" alt="npk">
+                            <div class="view_project">
+                                <h3>View Project</h3>
+                            </div>
+                        </div>
+                        <div class="project_title">
+                            <h3>NPK <br> Crackers</h3>
+                            <p>Website <span>/</span> Crackers</p>
+                        </div>
+                    </a>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
 </body>
 </html>
