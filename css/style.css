@@ -10,6 +10,9 @@ a{
     color: aliceblue;
     animation: shine 12s linear infinite;
 }
+a:visited{
+    color: #fff;
+}
 /* width */
 ::-webkit-scrollbar {
 width: 10px;
@@ -35,6 +38,7 @@ body{
     width: 100%;
     position: fixed;
     background: black;
+    z-index: 999;
 }
 .illus{
     width: 100%;
@@ -49,7 +53,7 @@ body{
     top: 0%;
     padding: 0.5%;
     width: 100%;
-    z-index: 999;
+    z-index: 9;
 }
 .logo{
     padding-left: 4%;
@@ -114,6 +118,62 @@ img{
 .hero{
    margin-top: 10%;
 }
+.social-icons{
+    font-size: 2rem;
+    margin-top: 2%;
+}
+.social-icons i{
+    margin-right: 1%;
+}
+.social-icons i:hover{
+    color: #764abc;
+    cursor: pointer;
+}
+.hire{
+    margin-top: 2%;
+}
+.hire button{
+    padding: .9rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.hire-me{
+    margin-right: 1%;
+    height: 20%;
+    background: #764abc;
+    color: #fff;
+    border: 2px solid #764abc;
+    transition: all 400ms ease;
+}
+.hire-me:hover{
+    border: 2px solid #764abc;
+    background: #fff;
+    color: #764abc;
+}
+.arrow{
+    color: #764abc;
+}
+.v-works{
+    background: #fff;
+    border: 2px solid #764abc;
+    transition: all 400ms ease;
+}
+.v-works{
+    color: #764abc;
+}
+.v-works:hover a, .v-works:hover .arrow ,.v-works:hover a:visited{
+    color: #fff;
+}
+.v-works:hover{
+    background: #764abc;
+    color: #fff;
+}
+.v-works:hover .arrow{
+    display: inline-block;
+    transform: rotateZ(90deg);
+    transition: all 400ms ease;
+}
 .greetings{    
    color: #444242b5;
  margin-left: 0.5%;
@@ -130,9 +190,8 @@ img{
  background-size: 200% auto;
  background-clip: text;
  -webkit-background-clip: text;
- 
     transform: translateX(-180%);
-    animation: dist 1000ms linear forwards;
+    animation: dist 1000ms linear forwards,shine 12s linear infinite;
 }
 /* .dk{
     transform: translateX(-180%);
@@ -184,7 +243,10 @@ img{
     background-size: cover;
     /* position: relative; */
 }
-.about-me,.skill,.portfolio{
+/* .ava{
+    position: relative; */
+/* } */
+.about-me,.skill,.portfolio,.contact_me{
     font-size: 3rem;
     color: blueviolet;
     position: relative;
@@ -192,7 +254,12 @@ img{
     transform: translateX(-180%);
     animation: dist 1000ms linear forwards;
 }
-.about-me::after,.skill::after,.portfolio::after{
+#avatar{
+    position: absolute;
+    transform: translate(800px,-210px);
+    z-index: -20;
+}
+.about-me::after,.skill::after,.portfolio::after,.contact_me::after{
     content: '';
     display: block;
     position: absolute;
@@ -203,7 +270,7 @@ img{
     border-radius: 15px;
     transition: all 250ms;
 }
-.brand,.brand-skill,.brand-port{
+.brand,.brand-skill,.brand-port,.brand-cont{
     position: absolute;
     top: 100%;
     left: 3%;
@@ -231,7 +298,7 @@ img{
     font-weight: bold;
 }
 /* Skill Section */
-#skill, #portfolio{
+#skill, #portfolio, #contact{
    background-image: url();
     padding: 5rem;
 }
@@ -263,7 +330,7 @@ img{
 }
 .front,.back,.design{
     position: relative;
-    z-index: -99;
+    /* z-index: -99; */
 }
 .web-front,.web-end,.web-des{
   text-align: center;
@@ -313,7 +380,6 @@ img{
 }
 .front:hover .web-front img,.back:hover .web-end img,.design:hover .web-des img{
    animation: logos linear 600ms reverse;
-   animation: pop linear 600ms;
 }
 .desc ul{
     margin-top: 8%;
@@ -341,11 +407,6 @@ img{
         transform: rotateY(360deg);
     }
 }
-@keyframes pop{
-    to{
-        transform: translateX(360px);
-    }
-}
 /* Portfolio */
 .brand-port{
     top: -240%;
@@ -359,6 +420,7 @@ img{
 }
 .project{
     position: relative;
+    /* z-index: -1; */
 }
 .project_img img{
     width: 100%;
@@ -382,6 +444,7 @@ img{
     align-items: center;
     /* position: relative; */
     opacity: 0;
+    z-index: 1;
 }
 .view_project::after{
     content: '➝';
@@ -391,6 +454,7 @@ img{
     font-size: 1.6rem;
     bottom: 0%;
     right: 0%;
+    z-index: 0;
     background: #00FFD4;
 }
 .projects a:hover .view_project h3{
@@ -419,6 +483,110 @@ img{
 }
 .project_title p{
     font-size: 1.1rem;
+}
+/* Contact Me */
+.cont{
+    position: relative;
+    z-index: 1;
+}
+.brand-cont{
+    z-index: -4;
+    top: -240%;
+    left: -10%;
+}
+#contact{
+    background: url('../images/contact..jpg') no-repeat;
+    background-size: cover;
+}
+.contact_form{
+    margin-top: 5%;
+    padding: 3rem;
+}
+.form_group { 
+	position: relative; 
+	margin-bottom: 45px; 
+}
+
+input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+	color: #636363;
+	width: 40%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 3px solid rgba(224, 222, 222, 0.39);
+}
+
+input:focus { outline: none; }
+
+label {
+	color: rgb(26, 25, 25); 
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+    pointer-events: none;
+    top: 45%;
+	transition: all 0.2s ease;
+}
+
+input:focus ~ label, input.used ~ label {
+	top: -20px;
+  transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color: #764abc;
+}
+
+.bar {
+	position: relative;
+	display: block;
+	width: 41.5%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 1px; 
+	position: absolute;
+	background: #764abc; 
+	transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    font-family: Montserrat;
+    width: 41.5%;
+    font-size: 1.6rem;
+    border-bottom: 3px solid rgba(224, 222, 222, 0.39);
+}
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after { width: 50%; }
+textarea:focus { border: none;}
+input[type="submit"]{
+    font-family: Montserrat;
+    margin-top: 3%;
+    padding: 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #764abc;
+    color: #fafafc;
+    width: 20%;
+    transition: all 300ms ease-out;
+}
+input[type="submit"]:hover{
+    background: orchid;
+    color: #fafafc;
 }
 /* Media Queries */
 @media only screen and (min-width: 320px)and (max-width: 430px){
@@ -455,7 +623,6 @@ img{
     .myself {
         margin-top: 15%;
     }
-    
     .container {
         width: 100%;
     }
@@ -468,6 +635,16 @@ img{
     }
     .about-me::after{
         width: 15%;
+    }
+    #avatar{
+        display: block;
+        position: relative;
+        transform: translate(50px,0);
+        width: fit-content;
+        height: fit-content;
+    }
+    svg{
+        width: 70%;
     }
     .f-end{
         margin-top: 6%;
@@ -563,6 +740,6 @@ img{
         width: fit-content;
     }
     .view_project::after {
-        padding: .5rem;
+        padding: .2rem;
     }
 }
