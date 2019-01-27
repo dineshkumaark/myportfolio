@@ -124,6 +124,8 @@ img{
 }
 .social-icons i{
     margin-right: 1%;
+    color: #000;
+    
 }
 .social-icons i:hover{
     color: #764abc;
@@ -137,6 +139,7 @@ img{
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 10px;
+    height: 60px;
 }
 .hire-me{
     margin-right: 1%;
@@ -521,22 +524,6 @@ input {
 
 input:focus { outline: none; }
 
-/* .floating-label {
-	color: rgb(26, 25, 25); 
-	font-size: 18px;
-	font-weight: normal;
-	position: absolute;
-    pointer-events: none;
-    top: 45%;
-	transition: all 0.2s ease;
-} */
-
-/* input:focus ~ .floating-label, input:valid ~ .floating-label{
-	top: -20px;
-  transform: scale(.75); left: -2px;
-	
-	color: #764abc;
-} */
 .control {
     float: left;
     position: relative;
@@ -650,7 +637,7 @@ input[type="submit"]:hover{
     }
     .brand{
     font-size: 7rem;
-    top: 105%;
+    top: 115%;
     left: 2%;
     }
     .social-icons {
@@ -661,9 +648,6 @@ input[type="submit"]:hover{
     .hire{
         margin-top: 8%;
         margin-left: 8%;
-    }
-    .hire-me{
-        height: 60px;
     }
     .myself {
         margin-top: 15%;
