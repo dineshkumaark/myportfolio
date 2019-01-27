@@ -521,7 +521,7 @@ input {
 
 input:focus { outline: none; }
 
-label {
+/* .floating-label {
 	color: rgb(26, 25, 25); 
 	font-size: 18px;
 	font-weight: normal;
@@ -529,14 +529,42 @@ label {
     pointer-events: none;
     top: 45%;
 	transition: all 0.2s ease;
-}
+} */
 
-input:focus ~ label, input.used ~ label {
+/* input:focus ~ .floating-label, input:valid ~ .floating-label{
 	top: -20px;
   transform: scale(.75); left: -2px;
-	/* font-size: 14px; */
+	
 	color: #764abc;
-}
+} */
+.control {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-top: 23px;
+    padding-bottom: 10px;
+  }
+  label{
+      position: absolute;
+      top:10px;
+      color: #764abc;
+      opacity: 0;
+  }
+  .control input + label ,.control textarea + label{
+    position: absolute;
+    top: 10px;
+    transition: top 0.7s ease, opacity 0.7s ease;
+    opacity: 0;
+    font-size: 13px;
+    color: #764abc;
+  }
+  .control input:valid + label{
+    opacity: 1;
+    top: 3px;
+  }
+  .control input:focus + label{
+    color: #764abc;
+  }
 
 .bar {
 	position: relative;
@@ -558,7 +586,7 @@ input:focus ~ label, input.used ~ label {
 
 .bar:after { right: 50%; }
 
-input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+.control input:focus ~ .bar:before, .control input:focus ~ .bar:after ,.control input:valid ~ .bar:before, .control input:valid ~ .bar:after{ width: 50%; }
 
 textarea{
     resize: none;
@@ -569,11 +597,16 @@ textarea{
     font-size: 1.6rem;
     border-bottom: 3px solid rgba(224, 222, 222, 0.39);
 }
+.control textarea .bar:before,textarea .bar:after{
+    position: absolute;
+    bottom: 4px;
+    background: #00FFD4;
+}
 textarea:focus ~ .bar:before, textarea:focus ~ .bar:after { width: 50%; }
 textarea:focus { border: none;}
 input[type="submit"]{
     font-family: Montserrat;
-    margin-top: 3%;
+    margin-top: 40%;
     padding: 1.2rem;
     font-size: 1rem;
     border: none;
@@ -609,7 +642,7 @@ input[type="submit"]:hover{
     margin-top: 0%;
     }
     .hero{
-        margin-top: 30%;
+        margin-top: 38%;
         padding-left: 8%;
     }
     .about-me {
@@ -619,6 +652,18 @@ input[type="submit"]:hover{
     font-size: 7rem;
     top: 105%;
     left: 2%;
+    }
+    .social-icons {
+        margin-top: 8%;
+        margin-left: 8%;
+        font-size: 2.5rem;
+    }
+    .hire{
+        margin-top: 8%;
+        margin-left: 8%;
+    }
+    .hire-me{
+        height: 60px;
     }
     .myself {
         margin-top: 15%;
@@ -667,7 +712,7 @@ input[type="submit"]:hover{
         margin-top: -10%;
         margin-left: -25%;
     }
-    .skill::after,.portfolio::after{
+    .skill::after,.portfolio::after,.contact_me::after{
         width: 19%;
     }
     .s-desc{
@@ -711,7 +756,7 @@ input[type="submit"]:hover{
         font-size: 5rem;
         left: -40%;
     }
-    .portfolio {
+    .portfolio{
         margin-top: -15%;
         margin-left: -28%;
     }
@@ -742,4 +787,39 @@ input[type="submit"]:hover{
     .view_project::after {
         padding: .2rem;
     }
+    /* Contact-Me */
+    .brand-cont {
+        top: -110%;
+        left: -40%;
+        font-size: 5.2rem;
+    }
+    .contact_me{
+        font-size: 2rem;
+        margin-left: -27%;
+    }
+    form{
+        width: 100%;
+        margin-left: -25%;
+    }
+    label{
+        left:-50px;
+    }
+    .bar {
+        position: relative;
+        display: block;
+        width: 125.5%;
+        margin-left: -40px;
+    }
+    input,textarea{
+        width: 130%;
+        margin-left: -25%;
+    }
+    textarea{
+        width: 138%;
+    }
+    input[type="submit"] {
+        width: 138%;
+        margin-top: 195%;
+    }
+    .control input:focus ~ .bar:before, .control input:focus ~ .bar:after ,.control input:valid ~ .bar:before, .control input:valid ~ .bar:after{ width: 55%; }
 }

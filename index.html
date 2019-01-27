@@ -146,17 +146,26 @@
                 <span class="brand-cont">contact</span>
             </div>
             <form action="#" class="contact_form">
-                <div class="form_group">
-                        <input type="text"><span class="highlight"></span><span class="bar"></span>
-                        <label>Name</label>
-                      </div>
-                      <div class="form_group">
-                        <input type="email"><span class="highlight"></span><span class="bar"></span>
-                        <label>Email</label>
-                      </div>
-                      <div class="form_group">
-                            <textarea id="msg" cols="30" rows="5" placeholder="How can I help?"></textarea></span><span class="bar"></span>
-                          </div>
+                <div class="control">
+                    <input type="text" name="title" placeholder="Name" required />
+                    <label for="title">Name</label><span class="highlight"></span><span class="bar"></span>
+                    
+                </div>
+                <div class="control">
+                    <input type="text" name="Email" placeholder="Email" required />
+                    <label for="email">Email</label><span class="highlight"></span><span class="bar"></span>
+                    
+                </div>
+                <div class="control">
+                    <textarea name="msg" id="msg" cols="30" rows="5" placeholder="How can I help?"></textarea>
+                    <label for="msg">Message</label><span class="highlight"></span><span class="bar unbar"></span>
+                    
+                </div>
+                <!-- <div class="control">
+                    <textarea id="msg" cols="30" rows="5" placeholder="How can I help?"></textarea>
+                    <label for="email">Message</label>
+                    <span class="highlight"></span><span class="bar"></span>
+                </div> -->
                 <input type="submit" value="Ping Me!">
             </form>
         </div>
