@@ -32,7 +32,10 @@ body{
     height: 100%;
     width: 100%;
     font-family: Montserrat,serif;
-    overflow-y: auto;
+}
+.scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 #headers{
     width: 100%;
@@ -84,7 +87,7 @@ img{
    float: right;
    margin-right: 6%;
 }
-#nav-bar li{
+#nav-bar li,#footer li{
    display: inline-block;
    margin-right: 45px;
    font-size: 1.2rem;
@@ -97,7 +100,7 @@ img{
     animation: shine 12s linear infinite;
    position: relative;
 }
-#nav-bar li::after{
+#nav-bar li::after,#footer li::after{
    content: '';
    display: block;
    position: absolute;
@@ -109,9 +112,10 @@ img{
    animation: shine 12s linear infinite;
    transition: all 250ms;
 }
-#nav-bar li:hover::after{
+#nav-bar li:hover::after,#footer li:hover::after{
    width: 100%;
 }
+#footer li
 @keyframes navline{
    to{ width:  90%; }
 }
@@ -193,8 +197,9 @@ img{
  background-size: 200% auto;
  background-clip: text;
  -webkit-background-clip: text;
-    transform: translateX(-180%);
-    animation: dist 1000ms linear forwards,shine 12s linear infinite;
+    transform: translateX(-200px);
+    opacity: 0;
+    animation: dist 800ms linear forwards,shine 12s linear infinite;
 }
 /* .dk{
     transform: translateX(-180%);
@@ -207,6 +212,7 @@ img{
 }
 @keyframes dist{
     to{
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -244,6 +250,7 @@ img{
     padding: 7rem;
     background: url('../images/about.png') no-repeat;
     background-size: cover;
+    scroll-snap-align: start;
     /* position: relative; */
 }
 /* .ava{
@@ -254,8 +261,8 @@ img{
     color: blueviolet;
     position: relative;
     z-index: -1;
-    transform: translateX(-180%);
-    animation: dist 1000ms linear forwards;
+    /* transform: translateX(-180%);
+    animation: dist 1000ms linear forwards; */
 }
 #avatar{
     position: absolute;
@@ -314,8 +321,8 @@ img{
 }
 .skill{
     margin-top: 4%;
-    transform: translateX(-180%);
-    animation: dist 1000ms linear forwards;
+    /* transform: translateX(-180%);
+    animation: dist 1000ms linear forwards; */
 }
 .brand-skill{
     top: -80%;
@@ -500,6 +507,7 @@ img{
 #contact{
     background: url('../images/contact..jpg') no-repeat;
     background-size: cover;
+    padding-bottom: 2%;
 }
 .contact_form{
     margin-top: 5%;
@@ -607,6 +615,44 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background: orchid;
     color: #fafafc;
+}
+
+/* #landing,#about,#portfolio,#contact,#skill{
+    scroll-snap-align: start;
+} */
+[data-scroll]{
+    transition: all 1s;
+}
+[data-scroll="in"]{
+    opacity: 1;
+    transform: translateX(0);
+}
+[data-scroll="out"]{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+#footer{
+    position: relative;
+    padding: 4rem;
+    text-align: center;
+    box-shadow: 0px 4px 4px 8px #ccc;
+    padding-bottom: 1rem;
+}
+#footer li{
+    display: inline-block;
+    margin: 5% 0%;
+    font-size: 1.6rem;
+    margin-right: 5%;
+}
+#footer .logo {
+    font-size: 3rem;
+}
+#footer ul{
+    transform: translateX(45px);
+}
+#footer .create{
+    bottom: 0;
+    font-size: 1.6rem;
 }
 /* Media Queries */
 @media only screen and (min-width: 320px)and (max-width: 430px){
