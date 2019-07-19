@@ -115,7 +115,7 @@ img{
 #nav-bar li:hover::after,#footer li:hover::after{
    width: 100%;
 }
-#footer li
+
 @keyframes navline{
    to{ width:  90%; }
 }
